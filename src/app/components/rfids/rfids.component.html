@@ -1,0 +1,31 @@
+<div class="fondo">
+    <main>
+        <section id="formulario-asignatura">
+            <div class="contenedor" id="contenedor-formulario-flex">
+                <h3>RFID</h3>
+                <div class="tabla">
+                    <table class="tablitaA">
+                        <tr>
+                            <th>Numero de Serie</th>
+                            <th>Estatus</th>
+                            <th><a routerLink="/createRfid"><i class="fas fa-plus-square"></i> Crear RFID</a> </th>
+                        </tr>
+                        <tr *ngFor="let rfid of Rfids">
+                            <td>{{rfid.serial}}</td>
+                            <td>{{rfid.status}}</td>
+                            <td>
+                                <button type="button" class="edit tooltip" routerLink="/editRfid/{{rfid.id}}">
+                                    <span class="tooltiptext">Editar</span>
+                                </button>&nbsp;
+                                <button class="delete tooltip" (click)="deleteRfid(rfid.id)">
+                                    <span class="tooltiptext">Eliminar</span></button>&nbsp;
+                                <!-- <button routerLink="/asignar-RFID" class="asignar tooltip">
+                                    <span class="tooltiptext">Asignar</span></button> -->
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>

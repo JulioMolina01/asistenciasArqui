@@ -1,0 +1,15 @@
+<div class="fondo">
+    <main>
+        <section id="formulario-alumno">
+            <div class="container" id="contenedor-formulario-flex">
+                <h3>&bull; Registro RFID &bull;</h3>
+                <div class="underline"></div>
+                <form (ngSubmit)="createRfid()" role="form" enctype="multipart/form-data">
+                    <input type="text" placeholder="Serial" name="serial" [(ngModel)]="rfid.serial">
+                    <button type="submit">Guardar</button>&nbsp;
+                    <button routerLink="/rfids">Cancelar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</div>

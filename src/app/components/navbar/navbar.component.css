@@ -1,0 +1,48 @@
+header .contenedor {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(0, 0, 0);
+    margin: 0;
+    border-bottom: 4px solid #777777;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+    margin-right: 60px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    -webkit-animation: down-underline .4s;
+    -moz-animation: down-underline .4s;
+    -o-animation: down-underline .4s;
+    animation: down-underline .4s;
+
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+header ul li a:hover {
+    color:#acacac;
+    padding: 8px 0px;
+
+    -webkit-animation: up-underline .4s;
+    -moz-animation: up-underline .4s;
+    -o-animation: up-underline .4s;
+    animation: up-underline .4s;
+}
+
+img {
+    height: 50px;
+    width: 180px;
+}

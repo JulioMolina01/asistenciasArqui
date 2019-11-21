@@ -1,0 +1,44 @@
+<div class="fondo">
+    <main>
+        <section id="formulario-asignatura">
+            <div class="contenedor" id="contenedor-formulario-flex">
+                <h3>Asignación</h3>
+                <div class="tabla">
+                    <table class="tablitaA">
+                        <tr>
+                            <th>Alumnos</th>
+                            <th>RFIDS</th>
+                            <th>Asignar</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="card" *ngFor="let customer of Customers">
+                                    <h5>{{customer.name}}</h5>
+                                    <button class="card-button" (click)="selectCustomer(customer.id)">Seleccionar</button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="card" *ngFor="let rfid of Rfids">
+                                    <h5>{{rfid.serial}}</h5>
+                                    <button class="card-button" (click)="selectRfid(rfid.id)">Seleccionar</button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="card" *ngIf="customerSelect==true">
+                                    <h5>{{customerName}}</h5>
+                                    <button class="card-button" (click)="removeCustomer()">Quitar</button>
+                                </div>
+                                <div class="card" *ngIf="rfidSelect==true">
+                                    <h5>{{rfidSerial}}</h5>
+                                    <button class="card-button" (click)="removeRfid()">Quitar</button>
+                                </div>
+                                <br>
+                                <button class="card-button" (click)="asignar(customerName,rfidSerial)">Asignar</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
