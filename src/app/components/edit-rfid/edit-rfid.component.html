@@ -4,7 +4,7 @@
             <div class="container" id="contenedor-formulario-flex">
                 <h3>&bull; Editar RFID &bull;</h3>
                 <div class="underline"></div>
-                <form (ngSubmit)="createRfid()" role="form" enctype="multipart/form-data">
+                <form (ngSubmit)="updateRfid()" role="form" enctype="multipart/form-data">
                     <input type="text" placeholder="Serial" name="serial" [(ngModel)]="rfid.serial">
                     <button type="submit">Guardar</button>&nbsp;
                     <button routerLink="/rfids">Cancelar</button>
