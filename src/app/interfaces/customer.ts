@@ -6,5 +6,5 @@ export interface Customer {
     matricula: number;
     email: string;
     gender: string;
-    serial: string;
+    serial: string;    
 }
