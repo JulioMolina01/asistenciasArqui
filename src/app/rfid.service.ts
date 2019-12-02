@@ -6,7 +6,7 @@ import * as io from 'socket.io-client';
 })
 export class RfidService {
 
-  private url = 'http://localhost:3000';
+  private url = 'http://192.168.43.113:3000';
     private socket;
 
     constructor() {

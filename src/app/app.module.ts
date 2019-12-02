@@ -18,7 +18,7 @@ import { EditAlumnoComponent } from './components/edit-alumno/edit-alumno.compon
 import { EditRfidComponent } from './components/edit-rfid/edit-rfid.component';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
-const config : SocketIoConfig = {url: 'http://localhost:8080', options: {}};
+const config : SocketIoConfig = {url: 'http://192.168.43.113:3000', options: {}};
 
 @NgModule({
   declarations: [

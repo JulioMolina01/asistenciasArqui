@@ -8,7 +8,7 @@ import { Rfid } from './interfaces/rfid';
 })
 export class ApiService {
 
-  // apiURL: string = 'http://djangobb.ddns.net/';
+  //apiURL: string = 'http://aws-api.ddns.net/';
 
   constructor(private httpClient: HttpClient) {}
 

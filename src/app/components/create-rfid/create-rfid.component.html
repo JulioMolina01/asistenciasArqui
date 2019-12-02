@@ -5,10 +5,10 @@
                 <h3>&bull; Registro RFID &bull;</h3>
                 <div class="underline" id="chat-mensajes"></div>                                                  
                         <div class="list-group-item" *ngFor="let msg of rfidsArray">
-                            <form (ngSubmit)="createRfid()" role="form" enctype="multipart/form-data">>
-                                <label> {{msg.cuerpo}}  </label>                                 
-                            </form>
-                            <button routerLink="/createRfid">Crear</button>                            
+                            <form (ngSubmit)="createRfid(msg)" role="form" enctype="multipart/form-data">>                                
+                                <input type="text" name="rfid" [(ngModel)]="msg"> 
+                                <button routerLink="/createRfid" type="submit">Crear</button>                            
+                            </form>                            
                         </div>                                   
                         <button routerLink="/rfids"> Cancelar</button>
                 </div>

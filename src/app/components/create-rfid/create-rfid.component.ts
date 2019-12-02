@@ -42,6 +42,7 @@ export class CreateRfidComponent implements OnInit {
   }
 
   createRfid(msg) {
+    this.rfid.serial=msg;
     this.rfidService.createRfid(this.rfid).subscribe((
       response: { data: Rfid} ) => {
         console.log('Rfid Creado');
@@ -50,6 +51,11 @@ export class CreateRfidComponent implements OnInit {
     );
     
     this.rfidsArray[msg].delet();
+  }
+  
+  selectRfid(id){
+    console.log(id);
+    
   }
 
 }
